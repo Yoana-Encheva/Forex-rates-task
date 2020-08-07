@@ -1,0 +1,36 @@
+<h1>Forex rates</h1>
+
+<table class="container">
+    <thead>
+        <tr>
+            <th>
+                <h1></h1>
+            </th>
+            <th>
+                <h1></h1>
+            </th>
+            <th>
+                <h1>Asset</h1>
+            </th>
+            <th>
+                <h1>Last</h1>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#if currencies}}
+        {{#each currencies}}
+        <tr>
+            <td>{{pair}}</td>
+            <td><img class="currency-base" src="{{baseUrl}}" alt="Flag" width="40" height="40"><img
+                    src="{{currencyUrl}}" alt="Flag" width="40" height="40"></td>
+            <td>{{base}} {{currency}}</td>
+            <td class="price">{{price}}</td>
+        </tr>
+        {{/each}}
+        {{/if}}
+
+    </tbody>
+</table>
+
+{{>footer}}
